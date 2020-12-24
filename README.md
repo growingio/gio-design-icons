@@ -18,11 +18,11 @@ yarn add @gio-design/icons
 
 ```javascript
 import React, { ReactDOM } from 'react';
-import { Setting } from '@gio-design/icons';
+import { SettingOutlined } from '@gio-design/icons';
 
 ReactDOM.render(
   <>
-    <Setting />
+    <SettingOutlined />
   </>,
   mountNode
 );
