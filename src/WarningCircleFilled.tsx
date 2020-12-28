@@ -2,7 +2,7 @@ import * as React from "react";
 import Wrapper from "./Wrapper";
 import { IconProps } from "./interface";
 
-function SvgWarningFilled(wrapperProps: IconProps) {
+function SvgWarningCircleFilled(wrapperProps: IconProps) {
   const { rotating, color, size, ...restProps } = wrapperProps;
   const props = {
     style: {
@@ -32,4 +32,4 @@ function SvgWarningFilled(wrapperProps: IconProps) {
   return <Wrapper {...restProps} icon={file} />;
 }
 
-export default SvgWarningFilled;
+export default SvgWarningCircleFilled;

@@ -48,7 +48,7 @@ function IconList({ category = 'outlined' }: IconListProps) {
   return (
     <div className="icons-category">
       {iconKeys.map((key: string) => (
-        <Item key={key} title={key} icon={React.createElement(allIcons[key])} />
+        <Item key={key} title={key} icon={React.createElement(allIcons[key], { size: '24px' })} />
       ))}
     </div>
   );
