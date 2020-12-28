@@ -21,6 +21,10 @@
     "build": "gio-rewire lib compile",
     "build-sotrybook": "build-storybook -s public",
     "generate": "npx @svgr/cli --template templates/svgTemplate.ts --out-dir src svgs",
+    "gen-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "gen-version": "conventional-changelog -p angular > VERSION.md",
+    "preversion": "git fetch --tags",
+    "postversion": "yarn gen-version && yarn gen-changelog",
     "storybook": "yarn build && start-storybook -p 6006 -s public",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
@@ -39,6 +43,7 @@
     "@svgr/cli": "^5.4.0",
     "@types/react-copy-to-clipboard": "^5.0.0",
     "commitizen": "^4.2.2",
+    "conventional-changelog-cli": "^2.1.1",
     "cz-conventional-changelog": "^3.3.0",
     "gio-rewire": "^1.0.4",
     "husky": "^4.3.6",
