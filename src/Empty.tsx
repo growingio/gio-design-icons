@@ -25,12 +25,8 @@ function SvgEmpty(wrapperProps: IconProps) {
         </clipPath>
         <style>{".empty_svg__cls-5{fill:#dcdfed}"}</style>
       </defs>
-      <g id="empty_svg__\u56FE\u5C42_2" data-name="\u56FE\u5C42 2">
-        <g
-          clipPath="url(#empty_svg__clip-path)"
-          id="empty_svg__\u56FE\u5C42_1-2"
-          data-name="\u56FE\u5C42 1"
-        >
+      <g>
+        <g clipPath="url(#empty_svg__clip-path)">
           <path
             id="empty_svg__\u8DEF\u5F84-6"
             d="M.59 35.88l8.79-19.14a4.5 4.5 0 014.09-2.62h33.06a4.5 4.5 0 014.09 2.62l8.79 19.14H35.88a5.88 5.88 0 11-11.76 0H.59z"

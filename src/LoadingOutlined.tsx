@@ -19,8 +19,8 @@ function SvgLoadingOutlined(wrapperProps: IconProps) {
       fill="currentColor"
       {...props}
     >
-      <g data-name="Layer 2">
-        <g fill="#2f3c70" data-name="Layer 1">
+      <g>
+        <g>
           <path
             d="M7 0a7 7 0 107 7 7 7 0 00-7-7zm0 13a6 6 0 116-6 6 6 0 01-6 6z"
             opacity={0.4}

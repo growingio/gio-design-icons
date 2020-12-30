@@ -22,8 +22,8 @@ function SvgDownOutlined(wrapperProps: IconProps) {
       <defs>
         <style />
       </defs>
-      <g id="down-outlined_svg__\u56FE\u5C42_2" data-name="\u56FE\u5C42 2">
-        <g id="down-outlined_svg__\u56FE\u5C42_1-2" data-name="\u56FE\u5C42 1">
+      <g>
+        <g>
           <path
             d="M7.7 9.48l-.35.35A.51.51 0 017 10a.53.53 0 01-.36-.15l-.35-.35-4.6-4.6a.51.51 0 010-.71.51.51 0 01.71 0l4.46 4.44a.2.2 0 00.14.06.25.25 0 00.14-.06l4.45-4.45a.51.51 0 01.72 0 .49.49 0 010 .69z"
             fill="currentColor"

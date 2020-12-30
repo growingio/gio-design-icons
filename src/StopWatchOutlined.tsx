@@ -24,11 +24,8 @@ function SvgStopWatchOutlined(wrapperProps: IconProps) {
           <path fill="currentColor" d="M0 0h14v14H0z" />
         </clipPath>
       </defs>
-      <g data-name="\u56FE\u5C42 2">
-        <g
-          clipPath="url(#stop-watch-outlined_svg__a)"
-          data-name="\u56FE\u5C42 1"
-        >
+      <g>
+        <g clipPath="url(#stop-watch-outlined_svg__a)">
           <path
             d="M6 2a6 6 0 106 6 6 6 0 00-6-6zm0 11a5 5 0 115-5 5 5 0 01-5 5z"
             fill="currentColor"
