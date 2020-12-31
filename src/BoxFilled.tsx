@@ -19,7 +19,7 @@ function SvgBoxFilled(wrapperProps: IconProps) {
       fill="currentColor"
       {...props}
     >
-      <g fill="none" fillRule="evenodd">
+      <g fillRule="evenodd">
         <path
           d="M.588 36.882l10-21.764h38.824l10 21.764h-23.53a5.882 5.882 0 11-11.764 0H.588z"
           fill="currentColor"

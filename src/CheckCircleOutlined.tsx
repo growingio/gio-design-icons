@@ -22,15 +22,9 @@ function SvgCheckCircleOutlined(wrapperProps: IconProps) {
       <defs>
         <style />
       </defs>
-      <g
-        id="check-circle-outlined_svg__\u56FE\u5C42_2"
-        data-name="\u56FE\u5C42 2"
-      >
-        <g
-          id="check-circle-outlined_svg__\u56FE\u5C42_1-2"
-          data-name="\u56FE\u5C42 1"
-        >
-          <g id="check-circle-outlined_svg__succeed" fill="#323333">
+      <g>
+        <g>
+          <g>
             <path
               d="M7 1a6 6 0 11-6 6 6 6 0 016-6zm0-1a7 7 0 11-7 7 7 7 0 017-7z"
               fillRule="evenodd"

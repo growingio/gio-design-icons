@@ -19,8 +19,8 @@ module.exports = {
         [
           '@svgr/babel-plugin-remove-jsx-attribute',
           {
-            elements: ['svg'],
-            attributes: ['className', 'id', 'fill'],
+            elements: ['svg', 'g'],
+            attributes: ['className', 'id', 'fill', 'data-name'],
           },
         ],
         [

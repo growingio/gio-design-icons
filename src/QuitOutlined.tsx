@@ -22,8 +22,8 @@ function SvgQuitOutlined(wrapperProps: IconProps) {
       <defs>
         <style />
       </defs>
-      <g id="quit-outlined_svg__\u56FE\u5C42_2" data-name="\u56FE\u5C42 2">
-        <g id="quit-outlined_svg__\u56FE\u5C42_1-2" data-name="\u56FE\u5C42 1">
+      <g>
+        <g>
           <path
             d="M8.58 6.2a.58.58 0 11-1.15 0V1.59a.58.58 0 111.15 0zm2.11-2.46a.58.58 0 01-.31-.48.56.56 0 01.27-.51.53.53 0 01.57 0 7 7 0 11-10 7.91 7 7 0 013.57-7.94.57.57 0 01.53 1 5.87 5.87 0 108.37 6.62 5.91 5.91 0 00-3-6.6z"
             fill="currentColor"

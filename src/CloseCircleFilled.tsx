@@ -22,14 +22,8 @@ function SvgCloseCircleFilled(wrapperProps: IconProps) {
       <defs>
         <style />
       </defs>
-      <g
-        id="close-circle-filled_svg__\u56FE\u5C42_2"
-        data-name="\u56FE\u5C42 2"
-      >
-        <g
-          id="close-circle-filled_svg__\u56FE\u5C42_1-2"
-          data-name="\u56FE\u5C42 1"
-        >
+      <g>
+        <g>
           <path
             d="M4.17 4.17a.5.5 0 01.71 0l2 2a.19.19 0 00.28 0l2-2a.5.5 0 01.71 0 .5.5 0 010 .71l-2 2a.19.19 0 000 .28l2 2a.5.5 0 010 .71.5.5 0 01-.71 0l-2-2a.19.19 0 00-.28 0l-2 2a.5.5 0 01-.71 0 .5.5 0 010-.71l2-2a.19.19 0 000-.28l-2-2a.5.5 0 010-.71zM7 0a7 7 0 11-7 7 7 7 0 017-7z"
             fill="currentColor"

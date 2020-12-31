@@ -25,12 +25,8 @@ function SvgDragMove(wrapperProps: IconProps) {
         </clipPath>
         <style>{".drag-move_svg__cls-3{fill:#a3adc8}"}</style>
       </defs>
-      <g id="drag-move_svg__\u56FE\u5C42_2" data-name="\u56FE\u5C42 2">
-        <g
-          clipPath="url(#drag-move_svg__clip-path)"
-          id="drag-move_svg__\u56FE\u5C42_1-2"
-          data-name="\u56FE\u5C42 1"
-        >
+      <g>
+        <g clipPath="url(#drag-move_svg__clip-path)">
           <circle
             className="drag-move_svg__cls-3"
             cx={1.13}
