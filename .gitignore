@@ -7,3 +7,4 @@ node_modules
 *.log
 storybook-static
 .idea
+src/icons

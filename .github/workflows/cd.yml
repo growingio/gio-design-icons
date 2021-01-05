@@ -48,8 +48,9 @@ jobs:
             es
             lib
           key: package-${{ github.sha }}
+      - name: Generate icons
+        run: yarn generate
       - name: Build package
-        if: steps.cache-package.outputs.cache-hit != 'true'
         run: yarn build
   publish:
     name: Publish package
