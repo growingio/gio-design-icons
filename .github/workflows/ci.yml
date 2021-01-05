@@ -63,5 +63,7 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
+      - name: Generate icons
+        run: yarn generate
       - name: Build package
         run: yarn build

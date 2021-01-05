@@ -5,8 +5,8 @@ function template({ template }, opts, { imports, componentName, jsx, exports }) 
   }
   const typeScriptTpl = template.smart({ plugins });
   return typeScriptTpl.ast`${imports}
-import Wrapper from './Wrapper';
-import { IconProps } from './interface';
+import Wrapper from '../Wrapper';
+import { IconProps } from '../interface';
 
 function ${componentName}(wrapperProps: IconProps) {
   const { rotating, color, size, ...restProps } = wrapperProps;

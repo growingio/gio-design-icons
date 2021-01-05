@@ -2,16 +2,20 @@ English | [简体中文](README.zh-CN.md)
 
 # GrowingIO Design Icons
 
-Semantic vector graphics. Before use icons, you need to install `@gio-design/icons` package:
+GrowingIO Design semantic vector icons.
+
+## Install
+
+Before use icons, you need to install `@gio-design/icons` package:
 
 ```bash
-npm install --save @gio-design/icons
+$ npm install --save @gio-design/icons
 ```
 
 or using with `yarn`:
 
 ```bash
-yarn add @gio-design/icons
+$ yarn add @gio-design/icons
 ```
 
 ## Usage

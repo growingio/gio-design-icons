@@ -2,6 +2,12 @@
   "name": "@gio-design/icons",
   "version": "20.12.1",
   "description": "GrowingIO Design semantic vector icons",
+  "keywords": [
+    "growingio",
+    "svg",
+    "icon",
+    "react"
+  ],
   "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",
   "homepage": "https://growingio.design/resources/icons",
   "license": "Apache-2.0",
@@ -20,12 +26,12 @@
   "scripts": {
     "build": "gio-rewire lib compile",
     "build-sotrybook": "build-storybook -s public",
-    "generate": "npx @svgr/cli --template templates/svgTemplate.ts --out-dir src svgs",
-    "gen-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons svgs",
+    "gen-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "gen-version": "conventional-changelog -p angular > VERSION.md",
     "preversion": "git fetch --tags",
     "postversion": "yarn gen-version && yarn gen-changelog",
-    "storybook": "yarn build && start-storybook -p 6006 -s public",
+    "storybook": "yarn generate && yarn build && start-storybook -p 6006 -s public",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
