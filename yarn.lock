@@ -1871,10 +1871,21 @@
   dependencies:
     lodash "^4.17.15"
 
-"@storybook/node-logger@6.1.14", "@storybook/node-logger@^6.1.14":
+"@storybook/node-logger@6.1.14":
   version "6.1.14"
   resolved "https://registry.npmjs.org/@storybook/node-logger/-/node-logger-6.1.14.tgz#e5294f986e3ec5c67b2738895b9d16c9a2b667fa"
   integrity sha512-3jrw7coAwFXZu4qK1vm54bCPhNRvxjG+7jISbhhocDoNIv0nLWL3+tJyrC5/k/XHQiUlLkhEzpMaASADmkttNw==
+  dependencies:
+    "@types/npmlog" "^4.1.2"
+    chalk "^4.0.0"
+    core-js "^3.0.1"
+    npmlog "^4.1.2"
+    pretty-hrtime "^1.0.3"
+
+"@storybook/node-logger@^6.1.14":
+  version "6.1.21"
+  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-6.1.21.tgz#bcf882209697acfe4fc60bc224676400bce260ed"
+  integrity sha512-wQZZw4n1PG3kGOsczWCBC6+8RagYkrGYDqsVOpUcs5shGbPg5beCXDuzP4nxz2IlsoP9ZtTSaX741H791OIOjA==
   dependencies:
     "@types/npmlog" "^4.1.2"
     chalk "^4.0.0"
