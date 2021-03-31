@@ -1,9 +1,9 @@
-## [21.3.2](https://github.com/growingio/gio-design-icons/compare/v21.3.1...v21.3.2) (2021-03-25)
+## [21.3.3](https://github.com/growingio/gio-design-icons/compare/v21.3.2...v21.3.3) (2021-03-31)
 
 
-### Bug Fixes
+### Features
 
-* replace the vaule of fill attribute with current color for rect element ([#80](https://github.com/growingio/gio-design-icons/issues/80)) ([79a9551](https://github.com/growingio/gio-design-icons/commit/79a9551a7aaaa78273d14c5741926dfbb7a02831))
+* add notification ([#89](https://github.com/growingio/gio-design-icons/issues/89)) ([8c5c5c8](https://github.com/growingio/gio-design-icons/commit/8c5c5c8ce80db439b1f3767da6d4c7f364ba7afd))
 
 
 
