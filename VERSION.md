@@ -1,9 +1,9 @@
-## [21.3.3](https://github.com/growingio/gio-design-icons/compare/v21.3.2...v21.3.3) (2021-03-31)
+## [21.3.4](https://github.com/growingio/gio-design-icons/compare/v21.3.3...v21.3.4) (2021-04-01)
 
 
-### Features
+### Bug Fixes
 
-* add notification ([#89](https://github.com/growingio/gio-design-icons/issues/89)) ([8c5c5c8](https://github.com/growingio/gio-design-icons/commit/8c5c5c8ce80db439b1f3767da6d4c7f364ba7afd))
+* **notification:** fix notification ([#91](https://github.com/growingio/gio-design-icons/issues/91)) ([da7ca02](https://github.com/growingio/gio-design-icons/commit/da7ca02e4f5bd8ea22cae7a7145aa0b0fd1206c4))
 
 
 
