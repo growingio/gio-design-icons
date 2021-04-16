@@ -1,9 +1,9 @@
-## [21.3.4](https://github.com/growingio/gio-design-icons/compare/v21.3.3...v21.3.4) (2021-04-01)
+# [21.4.0](https://github.com/growingio/gio-design-icons/compare/v21.3.4...v21.4.0) (2021-04-16)
 
 
-### Bug Fixes
+### Features
 
-* **notification:** fix notification ([#91](https://github.com/growingio/gio-design-icons/issues/91)) ([da7ca02](https://github.com/growingio/gio-design-icons/commit/da7ca02e4f5bd8ea22cae7a7145aa0b0fd1206c4))
+* add HomeOutlined, ListOutlined, UserAddFilled icon ([#102](https://github.com/growingio/gio-design-icons/issues/102)) ([feeaa1e](https://github.com/growingio/gio-design-icons/commit/feeaa1e1a36abf3fab39c75f277a744572c90ddb))
 
 
 
