@@ -28,9 +28,6 @@
     "sotrybook:build": "yarn generate && yarn build && build-storybook -s public",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "bugs": {
-    "url": "https://github.com/growingio/gio-design-icons/issues"
-  },
   "dependencies": {
     "@babel/runtime": "^7.14.8",
     "classnames": "^2.2.6"
@@ -70,6 +67,9 @@
     "webpack": "^5.50.0"
   },
   "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",
+  "bugs": {
+    "url": "https://github.com/growingio/gio-design-icons/issues"
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
