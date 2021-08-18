@@ -2,31 +2,22 @@
   "name": "@gio-design/icons",
   "version": "21.8.0",
   "description": "GrowingIO Design semantic vector icons",
-  "keywords": [
-    "growingio",
-    "svg",
-    "icon",
-    "react"
-  ],
-  "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",
-  "homepage": "https://growingio.design/resources/icons",
   "license": "Apache-2.0",
-  "main": "es/index.js",
-  "types": "es/index.d.ts",
   "files": [
     "dist",
+    "lib",
     "es"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/growingio/gio-design-icons.git"
-  },
+  "sideEffects": [
+    "dist/*",
+    "*.less"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/icons.umd.min.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "gio-rewire lib compile",
-    "build-sotrybook": "build-storybook -s public",
+    "build": "father-build",
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons svgs",
     "gen-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "gen-version": "conventional-changelog -p angular > VERSION.md",
@@ -34,48 +25,64 @@
     "preversion": "git fetch --tags",
     "postversion": "yarn gen-version && yarn gen-changelog",
     "storybook": "yarn generate && yarn build && start-storybook -p 6006 -s public",
+    "sotrybook:build": "yarn generate && yarn build && build-storybook -s public",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/growingio/gio-design-icons/issues"
   },
-  "devDependencies": {
-    "@commitlint/cli": "^13.1.0",
-    "@commitlint/config-conventional": "^13.1.0",
-    "@gio-design/cli": "^21.2.0",
-    "@storybook/addon-a11y": "^6.3.2",
-    "@storybook/addon-actions": "^6.3.2",
-    "@storybook/addon-controls": "^6.3.2",
-    "@storybook/addon-docs": "^6.3.2",
-    "@storybook/addon-storysource": "^6.3.2",
-    "@storybook/addons": "^6.3.2",
-    "@storybook/api": "^6.3.2",
-    "@storybook/node-logger": "^6.3.2",
-    "@storybook/react": "^6.3.2",
-    "@svgr/cli": "^5.4.0",
-    "@types/react-copy-to-clipboard": "^5.0.0",
-    "commitizen": "^4.2.2",
-    "conventional-changelog-cli": "^2.1.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "gio-rewire": "^1.0.4",
-    "husky": "^7.0.0",
-    "less": "^4.0.0",
-    "less-loader": "^7.2.0",
-    "react": "^17.0.1",
-    "react-copy-to-clipboard": "^5.0.2",
-    "react-dom": "^17.0.1"
-  },
   "dependencies": {
-    "@types/classnames": "^2.2.11",
+    "@babel/runtime": "^7.14.8",
     "classnames": "^2.2.6"
   },
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@gio-design/cli": "^21.2.0",
+    "@storybook/addon-a11y": "^6.3.7",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-controls": "^6.3.7",
+    "@storybook/addon-docs": "^6.3.7",
+    "@storybook/addon-storysource": "^6.3.7",
+    "@storybook/addons": "^6.3.7",
+    "@storybook/api": "^6.3.7",
+    "@storybook/builder-webpack5": "^6.4.0-alpha.21",
+    "@storybook/manager-webpack5": "^6.4.0-alpha.21",
+    "@storybook/node-logger": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "@svgr/cli": "^5.4.0",
+    "@types/classnames": "^2.2.11",
+    "@types/react-copy-to-clipboard": "^5.0.0",
+    "commitizen": "^4.2.2",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "father-build": "^1.19.8",
+    "husky": "^7.0.0",
+    "less": "3.13.1",
+    "less-loader": "^10.0.0",
+    "react": "^17.0.1",
+    "react-copy-to-clipboard": "^5.0.2",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.50.0"
+  },
+  "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "keywords": [
+    "growingio",
+    "svg",
+    "icon",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/growingio/gio-design-icons.git"
   }
 }

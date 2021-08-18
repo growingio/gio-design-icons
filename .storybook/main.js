@@ -1,7 +1,6 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     {
       name: '@storybook/addon-docs',
@@ -23,6 +22,10 @@ module.exports = {
     },
     '@storybook/addon-a11y',
   ],
+  core: {
+    builder: 'webpack5',
+  },
+  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.less$/,

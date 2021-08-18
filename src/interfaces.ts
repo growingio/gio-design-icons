@@ -26,3 +26,8 @@ export interface IconProps {
    */
   onClick?: (event: React.MouseEvent) => void;
 }
+
+export interface WrapperProps extends IconProps {
+  svgName: string;
+  icon: React.ReactNode;
+}

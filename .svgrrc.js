@@ -9,7 +9,7 @@ module.exports = {
       const basename = files[files.length - 1].split('.')[0];
       return `export { default as ${basename} } from './${basename}';`;
     });
-    exportEntries.push("export { IconProps } from '../interface';");
+    exportEntries.push("export type { IconProps } from '../interfaces';");
     return `${exportEntries.join('\n')}\n`;
   },
   jsx: {

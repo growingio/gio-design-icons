@@ -1,12 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import { IconProps } from './interface';
-import './Wrapper.less';
+import type { WrapperProps } from './interfaces';
 
-interface WrapperProps extends IconProps {
-  svgName: string;
-  icon: React.ReactNode;
-}
+import './Wrapper.less';
 
 const Wrapper: React.FC<WrapperProps> = (props: WrapperProps) => {
   const { icon, className, rotating, svgName, ...restProps } = props;
