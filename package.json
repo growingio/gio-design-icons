@@ -19,11 +19,8 @@
   "scripts": {
     "build": "father-build",
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons svgs",
-    "gen-changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "gen-version": "conventional-changelog -p angular > VERSION.md",
+    "gen-version": "conventional-changelog -p angular",
     "get-version": "gio-design version -p ./package.json",
-    "preversion": "git fetch --tags",
-    "postversion": "yarn gen-version && yarn gen-changelog",
     "storybook": "yarn generate && yarn build && start-storybook -p 6006 -s public",
     "storybook:build": "yarn generate && yarn build && build-storybook -s public",
     "test": "echo \"Error: run tests from root\" && exit 1"

@@ -2,6 +2,9 @@ name: Continuous Integration
 on:
   pull_request:
     types: [opened, synchronize]
+  push:
+    branches:
+      - master
 jobs:
   install:
     if: ${{ github.actor != 'dependabot[bot]' }}
@@ -23,8 +26,8 @@ jobs:
       - name: Install
         if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
         run: yarn install
-  lint:
-    name: Lint Checks
+  build:
+    name: Build Package
     needs: install
     runs-on: ubuntu-latest
     steps:
@@ -39,29 +42,15 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Lint pull request title
-        run: echo "${{ github.event.pull_request.title }}" | npx commitlint
-  build:
-    name: Build Package
-    needs: lint
-    strategy:
-      matrix:
-        node_version: [10, 12, 14]
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.4.0
-        with:
-          node-version: ${{ matrix.node_version }}
-      - name: Restore Node.js modules
-        uses: actions/cache@v2.1.6
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - name: Generate icons
         run: yarn generate
+      - name: Cache package
+        uses: actions/cache@v2.1.6
+        with:
+          path: |
+            dist
+            es
+            lib
+          key: package-${{ github.sha }}
       - name: Build package
         run: yarn build

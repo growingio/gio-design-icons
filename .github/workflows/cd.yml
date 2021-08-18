@@ -1,65 +1,14 @@
 name: Continuous Delivery
-on:
-  push:
-    branches:
-      - master
+on: workflow_dispatch
 jobs:
-  install:
-    name: Install dependencies
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.4.0
-        with:
-          node-version: 14
-      - name: Cache Node.js modules
-        id: cache-node-modules
-        uses: actions/cache@v2.1.6
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Install
-        if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
-        run: yarn install
-  build:
-    name: Build Package
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.4.0
-        with:
-          node-version: 14
-      - name: Restore Node.js modules
-        uses: actions/cache@v2.1.6
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Cache package
-        id: cache-package
-        uses: actions/cache@v2.1.6
-        with:
-          path: |
-            dist
-            es
-            lib
-          key: package-${{ github.sha }}
-      - name: Generate icons
-        run: yarn generate
-      - name: Build package
-        run: yarn build
   publish:
     name: Publish package
-    needs: build
-    if: ${{ startsWith(github.event.head_commit.message, 'docs(release)') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v2.4.0
         with:
@@ -85,6 +34,9 @@ jobs:
       - name: Get package version
         id: get-package-version
         run: echo "::set-output name=version::$(yarn -s get-version)"
+      - name: Get changelog
+        id: get-changelog
+        run: echo "::set-output name=changelog::$(yarn -s gen-version)"
       - name: Publish GitHub release
         uses: actions/create-release@v1
         env:
@@ -92,6 +44,6 @@ jobs:
         with:
           tag_name: v${{ steps.get-package-version.outputs.version }}
           release_name: v${{ steps.get-package-version.outputs.version }}
-          body_path: VERSION.md
+          body: ${{ steps.get-changelog.outputs.changelog }}
           draft: false
           prerelease: false
