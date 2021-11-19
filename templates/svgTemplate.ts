@@ -1,9 +1,13 @@
-function template({ template }, opts, { imports, componentName, jsx, exports }) {
-  const plugins = ['jsx'];
+function template(
+  { template },
+  opts,
+  { imports, componentName, jsx, exports }
+) {
+  const plugins = ['jsx']
   if (opts.typescript) {
-    plugins.push('typescript');
+    plugins.push('typescript')
   }
-  const typeScriptTpl = template.smart({ plugins });
+  const typeScriptTpl = template.smart({ plugins })
   return typeScriptTpl.ast`${imports}
 import Wrapper from '../Wrapper';
 import { IconProps } from '../interfaces';
@@ -14,8 +18,8 @@ function ${componentName}(wrapperProps: IconProps) {
     style: { 
       color
     },
-    width: !size ? '16px' : size,
-    height: !size ? '16px' : size,
+    width: !size ? '1em' : size,
+    height: !size ? '1em' : size,
   };
   const file = (
     ${jsx}
@@ -25,7 +29,7 @@ function ${componentName}(wrapperProps: IconProps) {
   );
 }
 ${exports}
-  `;
+  `
 }
 
-module.exports = template;
+module.exports = template
