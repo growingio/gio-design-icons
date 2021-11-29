@@ -23,6 +23,7 @@ module.exports = {
   core: {
     builder: 'webpack5',
   },
+  staticDirs: ['../public'],
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   webpackFinal: async (config) => {
     config.module.rules.push({
