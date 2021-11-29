@@ -2572,13 +2572,6 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@gio-design/cli@^21.2.0":
-  version "21.2.0"
-  resolved "https://registry.npmjs.org/@gio-design/cli/-/cli-21.2.0.tgz#f201a1c50acc1f2636a1cf7fcbbe034dc9979886"
-  integrity sha512-O8cVEFZN15hRZ3nCjvEIDtUG0e7wYbEX40xbEi279UkWokDSYxOhhcDnq+fmtw/u1aJRJMlFQgg+0DgnMOAmUA==
-  dependencies:
-    yargs "^16.2.0"
-
 "@isaacs/string-locale-compare@^1.0.1", "@isaacs/string-locale-compare@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@isaacs/string-locale-compare/-/string-locale-compare-1.1.0.tgz#291c227e93fd407a96ecd59879a35809120e432b"

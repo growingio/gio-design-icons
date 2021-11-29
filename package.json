@@ -19,8 +19,6 @@
   "scripts": {
     "build": "father-build",
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons svgs",
-    "gen-version": "conventional-changelog -p angular",
-    "get-version": "gio-design version -p ./package.json",
     "storybook": "yarn generate && yarn build && start-storybook -p 6006",
     "storybook:build": "yarn generate && yarn build && build-storybook",
     "test": "echo \"Error: run tests from root\" && exit 1"
@@ -36,7 +34,6 @@
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@gio-design/cli": "^21.2.0",
     "@semantic-release/github": "^8.0.2",
     "@storybook/addon-a11y": "^6.4.0",
     "@storybook/addon-actions": "^6.4.0",

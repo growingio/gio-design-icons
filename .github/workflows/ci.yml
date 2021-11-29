@@ -44,13 +44,5 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - name: Generate icons
         run: yarn generate
-      - name: Cache package
-        uses: actions/cache@v2.1.6
-        with:
-          path: |
-            dist
-            es
-            lib
-          key: package-${{ github.sha }}
       - name: Build package
         run: yarn build
