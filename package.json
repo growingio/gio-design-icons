@@ -37,6 +37,7 @@
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
     "@gio-design/cli": "^21.2.0",
+    "@semantic-release/github": "^8.0.2",
     "@storybook/addon-a11y": "^6.4.0",
     "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-controls": "^6.4.0",
@@ -61,6 +62,7 @@
     "react": "^17.0.1",
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "^17.0.1",
+    "semantic-release": "^18.0.1",
     "webpack": "^5.50.0"
   },
   "author": "GrowingIO Frontend Team <eng-frontend@growingio.com>",

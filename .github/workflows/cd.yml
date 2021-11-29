@@ -1,5 +1,9 @@
 name: Continuous Delivery
-on: workflow_dispatch
+on:
+  schedule:
+    - cron:  '30 2 * * 3'
+  workflow_dispatch:
+
 jobs:
   publish:
     name: Publish package
@@ -19,32 +23,10 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Restore package from cache
-        uses: actions/cache@v2.1.6
-        with:
-          path: |
-            dist
-            es
-            lib
-          key: package-${{ github.sha }}
-      - name: Publish package
-        run: yarn publish --non-interactive --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Get package version
-        id: get-package-version
-        run: echo "::set-output name=version::$(yarn -s get-version)"
-      - name: Get changelog
-        id: get-changelog
-        run: echo "::set-output name=changelog::$(yarn -s gen-version)"
-      - name: Publish GitHub release
-        uses: actions/create-release@v1
+      - name: Build package
+        run: yarn build
+      - name: Release
+        run: yarn semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.get-package-version.outputs.version }}
-          release_name: v${{ steps.get-package-version.outputs.version }}
-          body: |
-            ${{ steps.get-changelog.outputs.changelog }}
-          draft: false
-          prerelease: false
+          NPM_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}
