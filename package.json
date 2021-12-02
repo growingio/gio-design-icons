@@ -79,6 +79,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/growingio/gio-design-icons.git"
+    "url": "git+ssh://github.com/growingio/gio-design-icons.git"
   }
 }
