@@ -1,3 +1,27 @@
+## [21.11.1](https://github.com/growingio/gio-design-icons/compare/v21.9.1...v21.11.1) (2021-11-29)
+
+
+### Bug Fixes
+
+* **virtual-property-outlined:** 替换新的虚拟属性icon-svg ([2408c3a](https://github.com/growingio/gio-design-icons/commit/2408c3af2cf0a5f757871ecf2039ecba83354e2f))
+
+
+### Features
+
+* add add-square-outlined icon ([#200](https://github.com/growingio/gio-design-icons/issues/200)) ([087ff01](https://github.com/growingio/gio-design-icons/commit/087ff0138db0b77bcf8e741f7f65c939f4bf7d11))
+* **virtual-property-outlined:** add virtual-property-outlined icon ([08c8d98](https://github.com/growingio/gio-design-icons/commit/08c8d98721d4d7263f6544092e49a0fe76c397af))
+
+
+
+## [21.9.1](https://github.com/growingio/gio-design-icons/compare/v21.8.0...v21.9.1) (2021-09-24)
+
+
+### Features
+
+* **move-outlined:** add move-outlined icon ([bf0327c](https://github.com/growingio/gio-design-icons/commit/bf0327caf3138ace29a10a03cae9c48c0e15029a))
+
+
+
 # [21.8.0](https://github.com/growingio/gio-design-icons/compare/v21.6.1...v21.8.0) (2021-08-17)
 
 
@@ -51,7 +75,6 @@
 ### Features
 
 * **codeless-tracking-outlined,events-preset-outlined,metrics-custom-outlined:** add some icons ([4770924](https://github.com/growingio/gio-design-icons/commit/4770924a10d3a59be575a79f0db03578bc9a7d5a))
-* **codeless-tracking-outlined,events-preset-outlined,metrics-custom-outlined:** add some icons ([278b5ef](https://github.com/growingio/gio-design-icons/commit/278b5ef1cfb905e893464a6cccd6b70e6021b038))
 
 
 
@@ -82,7 +105,7 @@
 
 
 
-## [21.3.2](https://github.com/growingio/gio-design-icons/compare/v21.3.1...v21.3.2) (2021-03-25)
+## [21.3.2](https://github.com/growingio/gio-design-icons/compare/v21.3.1...v21.3.2) (2021-03-26)
 
 
 ### Bug Fixes
@@ -138,7 +161,7 @@
 
 
 
-## [21.1.1](https://github.com/growingio/gio-design-icons/compare/v21.1.0...v21.1.1) (2021-01-21)
+## [21.1.1](https://github.com/growingio/gio-design-icons/compare/v21.1.0...v21.1.1) (2021-01-22)
 
 
 ### Bug Fixes
@@ -183,7 +206,7 @@ The Change:
 
 
 
-## 20.12.1 (2020-12-28)
+## [20.12.1](https://github.com/growingio/gio-design-icons/compare/3f4a1f3831b6c6d3714703d5324164b69c2e67f6...v20.12.1) (2020-12-28)
 
 
 ### Features
