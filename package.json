@@ -18,8 +18,8 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "father-build",
-    "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons svgs",
-    "storybook": "yarn generate && yarn build && start-storybook -p 6006",
+    "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons --icon -- svgs",
+    "storybook": "yarn generate && start-storybook -p 6006",
     "storybook:build": "yarn generate && yarn build && build-storybook",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
@@ -47,7 +47,7 @@
     "@storybook/manager-webpack5": "^6.4.0",
     "@storybook/node-logger": "^6.4.0",
     "@storybook/react": "^6.4.0",
-    "@svgr/cli": "^5.4.0",
+    "@svgr/cli": "6.1.0",
     "@types/classnames": "^2.2.11",
     "@types/react-copy-to-clipboard": "^5.0.0",
     "commitizen": "^4.2.2",

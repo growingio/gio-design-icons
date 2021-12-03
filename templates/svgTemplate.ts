@@ -1,10 +1,6 @@
-function template({ template }, opts, { imports, componentName, jsx, exports }) {
-  const plugins = ['jsx'];
-  if (opts.typescript) {
-    plugins.push('typescript');
-  }
-  const typeScriptTpl = template.smart({ plugins });
-  return typeScriptTpl.ast`${imports}
+const template = ({ imports, componentName, jsx, exports }, { tpl }) => {
+  return tpl`
+${imports}
 import Wrapper from '../Wrapper';
 import { IconProps } from '../interfaces';
 
@@ -21,11 +17,11 @@ function ${componentName}(wrapperProps: IconProps) {
     ${jsx}
   );
   return (
-    <Wrapper {...restProps} svgName="${opts.state.componentName}" icon={file} />
+    <Wrapper {...restProps} svgName="${componentName}" icon={file} />
   );
 }
 ${exports}
-  `;
+`
 }
 
-module.exports = template;
+module.exports = template
