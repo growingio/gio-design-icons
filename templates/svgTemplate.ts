@@ -1,6 +1,5 @@
 const template = ({ imports, componentName, jsx, exports }, { tpl }) => {
   return tpl`
-${imports}
 import Wrapper from '../Wrapper';
 import { IconProps } from '../interfaces';
 

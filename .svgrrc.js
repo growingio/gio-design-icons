@@ -1,5 +1,25 @@
 module.exports = {
-  dimensions: false,
+  svgo: true,
+  svgoConfig: {
+    "plugins": [
+      {
+        "name": "preset-default",
+        "params": {
+          "overrides": {
+            "removeViewBox": false
+          }
+        }
+      },
+      {
+        "name": "removeXMLNS",
+        "params": true
+      },
+      {
+        "name": "convertStyleToAttrs",
+        "params": true
+      }
+    ]
+  },
   expandProps: 'end',
   semi: true,
   typescript: true,
@@ -19,7 +39,7 @@ module.exports = {
           '@svgr/babel-plugin-remove-jsx-attribute',
           {
             elements: ['svg', 'g', 'rect'],
-            attributes: ['className', 'id', 'fill', 'data-name'],
+            attributes: ['className', 'id', 'fill', 'data-name', 'width', 'height', 'style'],
           },
         ],
         [
