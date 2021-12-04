@@ -63,3 +63,8 @@ export const Filled = Template.bind({});
 Filled.args = {
   category: 'filled',
 };
+
+export const TwoTone = Template.bind({});
+TwoTone.args = {
+  category: 'twotone',
+};
