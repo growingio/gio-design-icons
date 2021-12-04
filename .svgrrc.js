@@ -1,22 +1,32 @@
 module.exports = {
   svgo: true,
   svgoConfig: {
-    "plugins": [
+    plugins: [
       {
-        "name": "preset-default",
-        "params": {
-          "overrides": {
-            "removeViewBox": false
+        name: 'preset-default',
+        params: {
+          overrides: {
+            removeViewBox: false
           }
         }
       },
       {
-        "name": "removeXMLNS",
-        "params": true
+        name: 'removeAttrs',
+        params: {
+          attrs: [
+            'fill',
+            'svg:width',
+            'svg:height'
+          ]
+        }
       },
       {
-        "name": "convertStyleToAttrs",
-        "params": true
+        name: 'removeXMLNS',
+        params: true
+      },
+      {
+        name: 'convertStyleToAttrs',
+        params: true
       }
     ]
   },
@@ -35,13 +45,6 @@ module.exports = {
   jsx: {
     babelConfig: {
       plugins: [
-        [
-          '@svgr/babel-plugin-remove-jsx-attribute',
-          {
-            elements: ['svg', 'g', 'rect'],
-            attributes: ['className', 'id', 'fill', 'data-name'],
-          },
-        ],
         [
           '@svgr/babel-plugin-add-jsx-attribute',
           {
