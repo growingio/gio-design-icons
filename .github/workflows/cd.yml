@@ -26,10 +26,6 @@ jobs:
       - name: Install
         if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
         run: yarn install
-      - name: Generate icons
-        run: yarn generate
-      - name: Build package
-        run: yarn build
       - name: Release
         run: yarn semantic-release
         env:

@@ -19,6 +19,7 @@
   "scripts": {
     "build": "father-build",
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons -- svgs",
+    "preversion": "yarn generate && yarn build",
     "storybook": "yarn generate && start-storybook -p 6006",
     "storybook:build": "yarn generate && yarn build && build-storybook",
     "test": "echo \"Error: run tests from root\" && exit 1"
