@@ -1,6 +1,6 @@
 {
   "name": "@gio-design/icons",
-  "version": "21.11.1",
+  "version": "22.0.0",
   "description": "GrowingIO Design semantic vector icons",
   "license": "Apache-2.0",
   "files": [
@@ -9,8 +9,7 @@
     "es"
   ],
   "sideEffects": [
-    "dist/*",
-    "*.less"
+    "dist/*"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,8 +20,7 @@
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons -- svgs",
     "preversion": "yarn generate && yarn build",
     "storybook": "yarn generate && start-storybook -p 6006",
-    "storybook:build": "yarn generate && yarn build && build-storybook",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "storybook:build": "yarn generate && build-storybook"
   },
   "dependencies": {
     "@babel/runtime": "^7.14.8"
