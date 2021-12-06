@@ -25,12 +25,4 @@ module.exports = {
   },
   staticDirs: ['../public'],
   stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.less$/,
-      use: ['style-loader', 'css-loader', 'less-loader'],
-    });
-
-    return config;
-  },
 };

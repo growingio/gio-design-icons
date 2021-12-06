@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import * as GIOIcons from '../src';
 
-import './icons.less';
+import './icons.css';
 
 export default {
   title: 'Icons',

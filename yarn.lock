@@ -11356,13 +11356,6 @@ lead@^1.0.0:
   dependencies:
     flush-write-stream "^1.0.2"
 
-less-loader@^10.0.0:
-  version "10.0.1"
-  resolved "https://registry.npmjs.org/less-loader/-/less-loader-10.0.1.tgz#c05aaba68d00400820275f21c2ad87cb9fa9923f"
-  integrity sha512-Crln//HpW9M5CbtdfWm3IO66Cvx1WhZQvNybXgfB2dD/6Sav9ppw+IWqs/FQKPBFO4B6X0X28Z0WNznshgwUzA==
-  dependencies:
-    klona "^2.0.4"
-
 less-plugin-npm-import@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/less-plugin-npm-import/-/less-plugin-npm-import-2.1.0.tgz#823e6986c93318a98171ca858848b6bead55bf3e"
@@ -11371,7 +11364,7 @@ less-plugin-npm-import@2.1.0:
     promise "~7.0.1"
     resolve "~1.1.6"
 
-"less@2.6.x || ^3.7.1", less@3.13.1:
+"less@2.6.x || ^3.7.1":
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/less/-/less-3.13.1.tgz#0ebc91d2a0e9c0c6735b83d496b0ab0583077909"
   integrity sha512-SwA1aQXGUvp+P5XdZslUOhhLnClSLIjWvJhmd+Vgib5BFIr9lMNlQwmwUNOjXThF/A0x+MCYYPeWEfeWiLRnTw==
