@@ -14,6 +14,7 @@ module.exports = {
         name: 'removeAttrs',
         params: {
           attrs: [
+            'data-name',
             'fill',
             'svg:width',
             'svg:height'
