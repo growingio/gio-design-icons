@@ -1,3 +1,10 @@
+## [22.0.1](https://github.com/growingio/gio-design-icons/compare/v22.0.0...v22.0.1) (2021-12-08)
+
+
+### Bug Fixes
+
+* remove color for drag-move-filled icon ([37678d0](https://github.com/growingio/gio-design-icons/commit/37678d0bbbd3ca41cdff6c040f19ebd87c874aa4))
+
 ## [22.0.0](https://github.com/growingio/gio-design-icons/compare/v21.11.1...v22.0.0) (2021-12-04)
 
 
@@ -10,5 +17,3 @@
 ### BREAKING CHANGES
 
 * Delete box-filled, empty, file-csv, file-doc, file-pdf, file-xlsx, file icons.
-
-
