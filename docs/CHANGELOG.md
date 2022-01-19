@@ -1,3 +1,10 @@
+# [22.1.0](https://github.com/growingio/gio-design-icons/compare/v22.0.1...v22.1.0) (2022-01-19)
+
+
+### Features
+
+* add user-card-outlined icon ([#228](https://github.com/growingio/gio-design-icons/issues/228)) ([39a9a0e](https://github.com/growingio/gio-design-icons/commit/39a9a0efe82710897c0ce195d617d1ad6081e420))
+
 ## [22.0.1](https://github.com/growingio/gio-design-icons/compare/v22.0.0...v22.0.1) (2021-12-08)
 
 
