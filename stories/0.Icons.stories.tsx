@@ -3,18 +3,24 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { action } from '@storybook/addon-actions';
 import CopyToClipboard from 'react-copy-to-clipboard';
 import * as GIOIcons from '../src';
-
+import { all, all as allIcons, categories } from './fields';
 import './icons.less';
-
 export default {
   title: 'Icons',
+
 } as Meta;
 
 interface ItemProps {
   title: string;
   icon: React.ReactElement;
 }
-
+interface CategoryProps {
+  icons: string[],
+  title: string
+}
+// const allIcons: {
+//   [key: string]: any;
+// } = GIOIcons;
 function Item({ title, icon }: ItemProps) {
   return (
     <CopyToClipboard
@@ -30,34 +36,41 @@ function Item({ title, icon }: ItemProps) {
     </CopyToClipboard>
   );
 }
-
-function filterIcons(iconKeys: string[], type: string) {
-  return iconKeys.filter((k: string) => k.toLowerCase().endsWith(type));
+function Category({ icons = [], title }: CategoryProps) {
+  console.log(icons);
+  const items = icons.map(name => allIcons[name] ? <Item key={name} title={name} icon={React.createElement(allIcons[name])}></Item> : '');
+  return (
+    <div>
+      <h3>{title}</h3>
+      <ul className="icons-category">{items}</ul>
+    </div>)
 }
+// function filterIcons(iconKeys: string[], type: string) {
+//   return iconKeys.filter((k: string) => k.toLowerCase().endsWith(type));
+// }
 
-const allIcons: {
-  [key: string]: any;
-} = GIOIcons;
+
 
 interface IconListProps {
   category?: 'outlined' | 'filled';
 }
 
 function IconList({ category = 'outlined' }: IconListProps) {
-  const iconKeys = filterIcons(Object.keys(allIcons), category);
+  const children = Object.keys(categories).map(key => {
+    return <Category key={key} icons={categories[key]} title={key}></Category>
+
+  })
   return (
-    <div className="icons-category">
-      {iconKeys.map((key: string) => (
-        <Item key={key} title={key} icon={React.createElement(allIcons[key], { size: '24px' })} />
-      ))}
+    <div className="icons">
+      {children}
     </div>
   );
 };
 
 const Template: Story<IconListProps> = (args) => <IconList {...args} />;
 
-export const Outlined = Template.bind({});
-Outlined.args = {};
+export const AllIcons = Template.bind({});
+AllIcons.args = {};
 
 export const Filled = Template.bind({});
 Filled.args = {

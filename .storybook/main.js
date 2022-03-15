@@ -12,6 +12,7 @@ module.exports = {
       },
     },
     '@storybook/addon-controls',
+    '@storybook/addon-toolbars',
     '@storybook/addon-actions',
     {
       name: '@storybook/addon-storysource',
@@ -22,7 +23,9 @@ module.exports = {
       },
     },
     '@storybook/addon-a11y',
+    'storybook-addon-designs',
   ],
+  staticDirs: ['../public'],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.less$/,
