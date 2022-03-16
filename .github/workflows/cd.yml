@@ -1,97 +1,34 @@
 name: Continuous Delivery
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron:  '30 2 * * 3'
+  workflow_dispatch:
+
 jobs:
-  install:
-    name: Install dependencies
+  publish:
+    name: Publish package
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          persist-credentials: false
       - name: Setup Node.js
-        uses: actions/setup-node@v2.1.5
+        uses: actions/setup-node@v3
         with:
           node-version: 14
-      - name: Cache Node.js modules
+      - name: Restore Node.js modules
         id: cache-node-modules
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.7
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
       - name: Install
         if: ${{ steps.cache-node-modules.outputs.cache-hit != 'true' }}
         run: yarn install
-  build:
-    name: Build Package
-    needs: install
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 14
-      - name: Restore Node.js modules
-        uses: actions/cache@v2.1.4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Cache package
-        id: cache-package
-        uses: actions/cache@v2.1.4
-        with:
-          path: |
-            dist
-            es
-            lib
-          key: package-${{ github.sha }}
-      - name: Generate icons
-        run: yarn generate
-      - name: Build package
-        run: yarn build
-  publish:
-    name: Publish package
-    needs: build
-    if: ${{ startsWith(github.event.head_commit.message, 'docs(release)') }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.1.5
-        with:
-          node-version: 14
-          registry-url: 'https://registry.npmjs.org'
-      - name: Restore Node.js modules
-        uses: actions/cache@v2.1.4
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
-      - name: Restore package from cache
-        uses: actions/cache@v2.1.4
-        with:
-          path: |
-            dist
-            es
-            lib
-          key: package-${{ github.sha }}
-      - name: Publish package
-        run: yarn publish --non-interactive --access public
+      - name: Release
+        run: yarn semantic-release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - name: Get package version
-        id: get-package-version
-        run: echo "::set-output name=version::$(yarn -s get-version)"
-      - name: Publish GitHub release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ steps.get-package-version.outputs.version }}
-          release_name: v${{ steps.get-package-version.outputs.version }}
-          body_path: VERSION.md
-          draft: false
-          prerelease: false
+          GITHUB_TOKEN: ${{ secrets.GHP_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTOMATION_TOKEN }}

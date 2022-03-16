@@ -1,7 +1,4 @@
-const path = require('path');
-
 module.exports = {
-  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     {
       name: '@storybook/addon-docs',
@@ -25,13 +22,9 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
-  staticDirs: ['../public'],
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.less$/,
-      use: ['style-loader', 'css-loader', 'less-loader'],
-    });
-
-    return config;
+  core: {
+    builder: 'webpack5',
   },
+  staticDirs: ['../public'],
+  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
 };

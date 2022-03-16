@@ -4,7 +4,11 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-      day: "wednesday"
+      day: 'wednesday'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-patch']
+      - dependency-name: '@storybook/*'
 
   - package-ecosystem: 'github-actions'
     directory: '/'

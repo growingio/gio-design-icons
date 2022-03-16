@@ -1,24 +1,20 @@
-English | [简体中文](README.zh-CN.md)
-
 # GrowingIO Design Icons
 
-GrowingIO Design semantic vector icons.
+[English](./README.en-US.md)
 
-## Install
-
-Before use icons, you need to install `@gio-design/icons` package:
+语义化的矢量图形。使用图标组件，你需要安装 `@gio-design/icons` 图标组件包：
 
 ```bash
-$ npm install --save @gio-design/icons
+npm install --save @gio-design/icons
 ```
 
-or using with `yarn`:
+或者使用 `yarn` 安装：
 
 ```bash
-$ yarn add @gio-design/icons
+yarn add @gio-design/icons
 ```
 
-## Usage
+## 如何使用
 
 ```javascript
 import React, { ReactDOM } from 'react';
@@ -32,8 +28,12 @@ ReactDOM.render(
 );
 ```
 
-## Contributing
+## 如何贡献
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![提交拉取请求](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 - [简体中文](./CONTRIBUTING.zh-CN.md)
+
+## 统计
+
+![Alt](https://repobeats.axiom.co/api/embed/3310c28ae87d7da6bc70eec315b9cb13f428e668.svg "Repobeats analytics image")
