@@ -4,6 +4,7 @@ module.exports = {
       name: '@storybook/addon-docs',
       options: {
         sourceLoaderOptions: {
+          injectDecorator: false,
           injectStoryParameters: false,
         },
       },

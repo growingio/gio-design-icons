@@ -2,12 +2,18 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { action } from '@storybook/addon-actions';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import * as GIOIcons from '../src';
-import { all, all as allIcons, categories } from './fields';
+import { all as allIcons, categories } from './fields';
 import './icons.css';
 export default {
   title: 'Icons',
-
+  component: IconList,
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/kP3A6S2fLUGVVMBgDuUx0f/GIO-Design?node-id=7670%3A84757',
+      allowFullscreen: true,
+    },
+  },
 } as Meta;
 
 interface ItemProps {
@@ -30,34 +36,48 @@ function Item({ title, icon }: ItemProps) {
       <div className="icon-item-container">
         <div className="icon-item-inner-container">
           {icon}
-          <span className="icon-item-title">{title}</span>
+          <span title={title} className="icon-item-title">{title}</span>
         </div>
       </div>
     </CopyToClipboard>
   );
 }
-function Category({ icons = [], title }: CategoryProps) {
-  console.log(icons);
-  const items = icons.map(name => allIcons[name] ? <Item key={name} title={name} icon={React.createElement(allIcons[name])}></Item> : '');
-  return (
+function Category({ icons = [], title, ...iconProps }: CategoryProps) {
+  const items = icons.map(name => <Item key={name} title={name} icon={React.createElement(allIcons[name], { ...iconProps })}></Item>);
+  return items?.length > 0 && (
     <div>
-      <h3>{title}</h3>
-      <ul className="icons-category">{items}</ul>
+      <h3 className='icons-category-title'>{title}<small>({items?.length})</small></h3>
+      <div className="icons-list">{items}</div>
     </div>)
 }
-// function filterIcons(iconKeys: string[], type: string) {
-//   return iconKeys.filter((k: string) => k.toLowerCase().endsWith(type));
-// }
+function filterIcons(iconKeys: string[], kw: string) {
+  console.log(kw, iconKeys);
+  if (kw?.trim()) {
+    return iconKeys.filter((k: string) => k.toLowerCase().includes(kw?.trim()));
+  }
+  return iconKeys;
+}
 
 
 
 interface IconListProps {
-  category?: 'outlined' | 'filled';
+  // type?: 'outlined' | 'filled' | 'twotone';
+  keyword?: string,
+  /**
+     * 是否有旋转动画
+     */
+  rotating?: boolean;
+  /**
+   * 图标颜色
+   */
+  color?: string;
 }
 
-function IconList({ category = 'outlined' }: IconListProps) {
+function IconList({ keyword, ...iconProps }: IconListProps) {
+
   const children = Object.keys(categories).map(key => {
-    return <Category key={key} icons={categories[key]} title={key}></Category>
+    const icons = filterIcons(categories[key], keyword)
+    return <Category key={key} icons={icons} title={key} {...iconProps}></Category>
 
   })
   return (
@@ -70,9 +90,9 @@ function IconList({ category = 'outlined' }: IconListProps) {
 const Template: Story<IconListProps> = (args) => <IconList {...args} />;
 
 export const AllIcons = Template.bind({});
-AllIcons.args = {};
-
-export const Filled = Template.bind({});
-Filled.args = {
-  category: 'filled',
+AllIcons.args = {
+  keyword: '',
+  color: '',
+  rotating: false,
 };
+

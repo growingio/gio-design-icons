@@ -67,5 +67,6 @@ export const categories: { [key: string]: any } = {
   ['Common 通用图标']: commonIcons,
   ['User 用户图标']: userIcons,
   ['Data 数据图标']: dataIcons,
-  ['Platform & Device 平台和设备图标']: otherIcons
+  ['Platform & Device 平台和设备图标']: otherIcons,
+  ['ttt']:[]
 }
