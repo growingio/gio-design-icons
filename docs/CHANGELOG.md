@@ -1,3 +1,15 @@
+# [23.0.0](https://github.com/growingio/gio-design-icons/compare/v22.1.0...v23.0.0) (2022-03-18)
+
+
+### Code Refactoring
+
+* **icons:** rename icons ([#242](https://github.com/growingio/gio-design-icons/issues/242)) ([76164fa](https://github.com/growingio/gio-design-icons/commit/76164fa9f9b1d7a08ad4bde73930c471823203a6))
+
+
+### BREAKING CHANGES
+
+* **icons:** remove some icons suffix outlined/filled/twotone
+
 # [22.1.0](https://github.com/growingio/gio-design-icons/compare/v22.0.1...v22.1.0) (2022-01-19)
 
 
