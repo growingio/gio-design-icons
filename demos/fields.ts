@@ -1,7 +1,5 @@
 import * as GIOIcons from '../src';
-export const all: { [key: string]: any } = GIOIcons;
-
-// const filterIcon = (icons: string[], kw: string) => icons?.filter((iconName: string) => iconName.toLowerCase().includes(kw.replace(/-/g, '').replace(/(filled|outlined|twotone)$/, '')))
+export const all = Object.keys(GIOIcons);
 
 const user: string[] = [
   'user',
@@ -42,31 +40,41 @@ const data: string[] = [
   'code',
   'condition'
 ]
-const other: string[] = [
+const platform: string[] = [
   'mobile',
+  'mobile-filled',
   'desktop',
+  'desktop-filled',
   'tablet',
+  'tablet-filled',
   'browser',
   'browser-key',
   'browser-eye',
   'wechat',
+  'wechat-filled',
   'alipay',
+  'alipay-filled',
   'windows',
+  'windows-filled',
   'apple',
+  'apple-filled',
   'android',
-  'mini-program'
+  'android-filled',
+  'mini-program',
+  'mini-program-filled'
 ]
-function filterName(name: string, kw: string) {
-  return name.toLowerCase().includes(kw.replace(/-/g, '').replace(/(filled|outlined|twotone)$/, ''));
-}
-const commonIcons: string[] = Object.keys(all).filter(name => ![...user, ...data, ...other].some(kw => filterName(name, kw)));
-const dataIcons = Object.keys(all).filter(name => [...data].some(kw => filterName(name, kw)));
-const userIcons = Object.keys(all).filter(name => [...user].some(kw => filterName(name, kw)));
-const otherIcons = Object.keys(all).filter(name => [...other].some(kw => filterName(name, kw)));
+
+const toPascalCase = (input: string) => ('-' + input).replace(/-([a-z])/g, (match) => match[1].toUpperCase());
+
+const dataIcons = data.map(toPascalCase)
+const userIcons = user.map(toPascalCase);
+const platformIcons = platform.map(toPascalCase);
+
+const datum = [...dataIcons, ...userIcons, ...platformIcons]
+const commonIcons = all.filter(n => !datum.includes(n))
 export const categories: { [key: string]: any } = {
   ['Common 通用图标']: commonIcons,
   ['User 用户图标']: userIcons,
   ['Data 数据图标']: dataIcons,
-  ['Platform & Device 平台和设备图标']: otherIcons,
-  ['ttt']:[]
+  ['Platform & Device 平台和设备图标']: platformIcons,
 }

@@ -2,8 +2,10 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { action } from '@storybook/addon-actions';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import { all as allIcons, categories } from './fields';
+import * as allIcons from '../src';
+import { categories } from './fields';
 import './icons.css';
+import { Search } from '../src';
 export default {
   title: 'Icons',
   component: IconList,
@@ -43,7 +45,7 @@ function Item({ title, icon }: ItemProps) {
   );
 }
 function Category({ icons = [], title, ...iconProps }: CategoryProps) {
-  const items = icons.map(name => <Item key={name} title={name} icon={React.createElement(allIcons[name], { ...iconProps })}></Item>);
+  const items = icons.map(name => allIcons[name] && <Item key={name} title={name} icon={React.createElement(allIcons[name], { ...iconProps })}></Item>);
   return items?.length > 0 && (
     <div>
       <h3 className='icons-category-title'>{title}<small>({items?.length})</small></h3>
@@ -51,7 +53,6 @@ function Category({ icons = [], title, ...iconProps }: CategoryProps) {
     </div>)
 }
 function filterIcons(iconKeys: string[], kw: string) {
-  console.log(kw, iconKeys);
   if (kw?.trim()) {
     return iconKeys.filter((k: string) => k.toLowerCase().includes(kw?.trim()));
   }
@@ -74,15 +75,26 @@ interface IconListProps {
 }
 
 function IconList({ keyword, ...iconProps }: IconListProps) {
+  const [searchKey, setSearchKey] = React.useState(keyword)
+  const children = React.useMemo(() => {
+    return Object.keys(categories).map(key => {
+      const icons = filterIcons(categories[key], searchKey)
+      return <Category key={key} icons={icons} title={key} {...iconProps}></Category>
 
-  const children = Object.keys(categories).map(key => {
-    const icons = filterIcons(categories[key], keyword)
-    return <Category key={key} icons={icons} title={key} {...iconProps}></Category>
-
-  })
+    })
+  }, [searchKey, iconProps])
   return (
-    <div className="icons">
-      {children}
+    <div>
+      <div className='search-bar'>
+        <input type='text' placeholder='输入icon名称搜索' onChange={(e) => setSearchKey(e.target.value)} />
+        <div className='suffix'>
+          <Search/>
+        </div>
+      </div>
+      <div className='divider'></div>
+      <div className="icons">
+        {children}
+      </div>
     </div>
   );
 };
@@ -91,7 +103,6 @@ const Template: Story<IconListProps> = (args) => <IconList {...args} />;
 
 export const AllIcons = Template.bind({});
 AllIcons.args = {
-  keyword: '',
   color: '',
   rotating: false,
 };
