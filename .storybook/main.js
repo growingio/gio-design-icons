@@ -4,11 +4,13 @@ module.exports = {
       name: '@storybook/addon-docs',
       options: {
         sourceLoaderOptions: {
+          injectDecorator: false,
           injectStoryParameters: false,
         },
       },
     },
     '@storybook/addon-controls',
+    '@storybook/addon-toolbars',
     '@storybook/addon-actions',
     {
       name: '@storybook/addon-storysource',
@@ -19,6 +21,7 @@ module.exports = {
       },
     },
     '@storybook/addon-a11y',
+    'storybook-addon-designs',
   ],
   core: {
     builder: 'webpack5',

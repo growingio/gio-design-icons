@@ -19,6 +19,9 @@ function ${componentName}(wrapperProps: IconProps) {
     <Wrapper {...restProps} svgName="${componentName}" icon={file} />
   );
 }
+${componentName}.displayName = '${componentName?.slice(3)}';
+
+export const ${componentName.slice(3)}=${componentName};
 ${exports}
 `
 }

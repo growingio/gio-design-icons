@@ -38,3 +38,52 @@
 .icon-item-container:hover {
   border: 2px solid #4177f6;
 }
+.icons-category-title {
+  color: #7b819c;
+}
+.search-bar {
+  display: inline-flex;
+  box-sizing: border-box;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--gray-2, #dfe4ee);
+  border-radius: 4px;
+  width: 320px;
+  
+}
+.search-bar > input {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  color: #242e59;
+  text-align: left;
+  background-color: #0000;
+  border: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  border: none;
+  outline: none;
+}
+.search-bar > input::placeholder{
+  color: #dfe4ee;
+}
+.search-bar > .suffix {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 8px;
+  cursor: pointer;
+}
+.search-bar > .suffix svg {
+  width: 14px;
+  height: 14px;
+  color: #adb2c2;
+}
+.divider{
+  border: 0 solid var(--gray-2, #dfe4ee);
+  border-top-width: thin;
+  margin: 10px 0;
+}
