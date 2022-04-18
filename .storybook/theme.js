@@ -3,7 +3,7 @@ import { getPreferredColorScheme } from '@storybook/theming/dist/esm/utils';
 
 const baseTheme = {
   fontBase: '"PingFang SC", sans-serif',
-  brandTitle: 'GrowingIO Design Charts',
+  brandTitle: 'GrowingIO Design Icons',
   brandUrl: 'https://www.growingio.com',
 };
 
