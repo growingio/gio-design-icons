@@ -1,7 +1,6 @@
 import React from 'react';
 import type { WrapperProps } from './interfaces';
 
-// import './Wrapper.css';
 
 const Wrapper: React.FC<WrapperProps> = (props: WrapperProps) => {
   const { icon, className, rotating, svgName, ...restProps } = props;

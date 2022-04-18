@@ -5,7 +5,8 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import * as allIcons from '../src';
 import { categories } from './fields';
 import './icons.css';
-import { Search } from '../src';
+import '../src/Wrapper.css'
+import { SearchOutlined } from '../src';
 export default {
   title: 'Icons',
   component: IconList,
@@ -24,7 +25,8 @@ interface ItemProps {
 }
 interface CategoryProps {
   icons: string[],
-  title: string
+  title: string,
+  theme?: string,
 }
 // const allIcons: {
 //   [key: string]: any;
@@ -44,8 +46,9 @@ function Item({ title, icon }: ItemProps) {
     </CopyToClipboard>
   );
 }
-function Category({ icons = [], title, ...iconProps }: CategoryProps) {
-  const items = icons.map(name => allIcons[name] && <Item key={name} title={name} icon={React.createElement(allIcons[name], { ...iconProps })}></Item>);
+function Category({ icons = [], title, theme, ...iconProps }: CategoryProps) {
+  const themeIcons = theme ? icons.filter(i => i.endsWith(theme)) : icons;
+  const items = themeIcons.map(name => allIcons[name] && <Item key={name} title={name} icon={React.createElement(allIcons[name], { ...iconProps })}></Item>).filter(Boolean);
   return items?.length > 0 && (
     <div>
       <h3 className='icons-category-title'>{title}<small>({items?.length})</small></h3>
@@ -54,7 +57,7 @@ function Category({ icons = [], title, ...iconProps }: CategoryProps) {
 }
 function filterIcons(iconKeys: string[], kw: string) {
   if (kw?.trim()) {
-    return iconKeys.filter((k: string) => k.toLowerCase().includes(kw?.trim()));
+    return iconKeys.filter((k: string) => k.toLowerCase().replace(/(outlined|filled|twotone)$/i, '').includes(kw?.trim()));
   }
   return iconKeys;
 }
@@ -88,7 +91,7 @@ function IconList({ keyword, ...iconProps }: IconListProps) {
       <div className='search-bar'>
         <input type='text' placeholder='输入icon名称搜索' onChange={(e) => setSearchKey(e.target.value)} />
         <div className='suffix'>
-          <Search/>
+          <SearchOutlined />
         </div>
       </div>
       <div className='divider'></div>
@@ -105,5 +108,26 @@ export const AllIcons = Template.bind({});
 AllIcons.args = {
   color: '',
   rotating: false,
+  size: '16px'
 };
 
+export const Outlined = Template.bind({});
+Outlined.args = {
+  color: '',
+  rotating: false,
+  theme: 'Outlined'
+};
+
+export const Filled = Template.bind({});
+Filled.args = {
+  color: '',
+  rotating: false,
+  theme: 'Filled'
+};
+
+export const TwoTone = Template.bind({});
+TwoTone.args = {
+  color: '',
+  rotating: false,
+  theme: 'TwoTone'
+};

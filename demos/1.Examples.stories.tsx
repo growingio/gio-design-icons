@@ -1,19 +1,17 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { action } from '@storybook/addon-actions';
-import { Gear } from '../src';
+import { GearOutlined } from '../src';
 import { IconProps } from '../src/interfaces';
+import '../src/Wrapper.css';
 
 export default {
   title: 'Examples',
-  component: Gear,
-  // decorators: [(Story, context) => <div style={{
-  //   display: 'inline-block', padding: '20px',
-  // }}>{Story()}</div>]
+  component: GearOutlined,
 } as Meta;
 
 const Template: Story<IconProps> = (args) =>
-  <Gear {...args} />
+  <GearOutlined {...args} />
 
 export const Default = Template.bind({});
 Default.args = {

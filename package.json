@@ -21,7 +21,7 @@
     "build": "yarn run build:esm && yarn run build:cjs && yarn run build:umd",
     "build:esm": "cross-env BUILD_TYPE=esm father-build",
     "build:cjs": "cross-env BUILD_TYPE=cjs father-build",
-    "build:umd": "cross-env BUILD_TYPE=umd node build-umd",
+    "build:umd": "cross-env BUILD_TYPE=umd node ./build-umd",
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons -- svgs",
     "preversion": "yarn generate && yarn build",
     "storybook": "yarn generate && start-storybook -p 6006",
