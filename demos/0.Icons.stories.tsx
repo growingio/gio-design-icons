@@ -108,7 +108,7 @@ export const AllIcons = Template.bind({});
 AllIcons.args = {
   color: '',
   rotating: false,
-  size: '16px'
+  size: '1em'
 };
 
 export const Outlined = Template.bind({});

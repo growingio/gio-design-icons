@@ -31,6 +31,9 @@ module.exports = {
       }
     ]
   },
+  svgProps:{
+    focusable:false
+  },
   expandProps: 'end',
   semi: true,
   typescript: true,

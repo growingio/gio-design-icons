@@ -49,7 +49,7 @@ const platform: string[] = [
   'tablet-filled',
   'browser-outlined',
   'browser-key-outlined',
-  'browser-eye-filled',
+  'browser-eye-outlined',
   'wechat-outlined',
   'wechat-filled',
   'alipay-outlined',
