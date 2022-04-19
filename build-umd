@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+const fs = require('fs-extra');
+const util = require('util');
+const { exec } = require('child_process');
+const path = require('path');
+
+const execSync = util.promisify(exec);
+const getRelativePath = pathStr => path.join(__dirname, pathStr);
+
+const build = async () => {
+  console.info('start build umd...');
+  
+  await execSync('father-build');
+  await fs.removeSync(getRelativePath('./dist/icons.js'));
+  await fs.removeSync(getRelativePath('./dist/icons.min.js'));
+  await fs.moveSync(getRelativePath('./dist/icons.css'), getRelativePath('./dist/index.css'));
+  await fs.moveSync(getRelativePath('./dist/icons.min.css'), getRelativePath('./dist/index.min.css'));
+  await fs.removeSync(getRelativePath('./dist/style.d.ts'))
+};
+
+build();

@@ -9,14 +9,19 @@
     "es"
   ],
   "sideEffects": [
-    "dist/*"
+    "dist/*",
+    "es/*",
+    "lib/*"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
-  "unpkg": "dist/icons.umd.min.js",
+  "unpkg": "dist/index.min.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "father-build",
+    "build": "yarn run build:esm && yarn run build:cjs && yarn run build:umd",
+    "build:esm": "cross-env BUILD_TYPE=esm father-build",
+    "build:cjs": "cross-env BUILD_TYPE=cjs father-build",
+    "build:umd": "cross-env BUILD_TYPE=umd node ./build-umd",
     "generate": "svgr --template templates/svgTemplate.ts --out-dir src/icons -- svgs",
     "preversion": "yarn generate && yarn build",
     "storybook": "yarn generate && start-storybook -p 6006",
@@ -52,8 +57,10 @@
     "@types/react-copy-to-clipboard": "^5.0.0",
     "commitizen": "^4.2.2",
     "conventional-changelog-cli": "^2.1.1",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "father-build": "^1.20.4",
+    "fs-extra": "^10.0.1",
     "husky": "^7.0.0",
     "react": "^17.0.1",
     "react-copy-to-clipboard": "^5.0.2",

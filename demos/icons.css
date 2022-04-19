@@ -8,6 +8,8 @@
   border-radius: 2px;
   cursor: pointer;
   user-select: none;
+  color: #242E59;
+  position: relative;
 }
 
 .icon-item-inner-container {
@@ -16,11 +18,13 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+  transition:all 0.25s ease-in-out;
 }
 
 .icon-item-inner-container > .gio-icon {
   display: inline-block;
   margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out 0s ;
 }
 
 .icon-item-inner-container > .icon-item-title {
@@ -37,6 +41,10 @@
 
 .icon-item-container:hover {
   border: 2px solid #4177f6;
+  
+}
+.icon-item-container:hover .gio-icon {
+  transform: scale(1.4);
 }
 .icons-category-title {
   color: #7b819c;

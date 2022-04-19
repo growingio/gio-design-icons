@@ -22,11 +22,11 @@ $ yarn add @gio-design/icons
 
 ```javascript
 import React, { ReactDOM } from 'react';
-import { Gear } from '@gio-design/icons';
+import { GearOutlined } from '@gio-design/icons';
 
 ReactDOM.render(
   <>
-    <Gear />
+    <GearOutlined />
   </>,
   mountNode
 );

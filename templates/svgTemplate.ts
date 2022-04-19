@@ -9,8 +9,8 @@ function ${componentName}(wrapperProps: IconProps) {
     style: { 
       color
     },
-    width: !size ? '16px' : size,
-    height: !size ? '16px' : size,
+    width: !size ? '1em' : size, 
+    height: !size ? '1em' : size,
   };
   const file = (
     ${jsx}
