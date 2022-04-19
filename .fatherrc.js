@@ -2,7 +2,6 @@ const common = {
   runtimeHelpers: true,
 };
 
-// 开发环境
 const dev = {
   entry: ['src/index.ts', 'src/style.ts'],
   autoprefixer: {
