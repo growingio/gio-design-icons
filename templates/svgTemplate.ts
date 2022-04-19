@@ -9,7 +9,7 @@ function ${componentName}(wrapperProps: IconProps) {
     style: { 
       color
     },
-    width: !size ? '1em' : size,
+    width: !size ? '1em' : size, 
     height: !size ? '1em' : size,
   };
   const file = (
