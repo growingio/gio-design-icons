@@ -1,3 +1,10 @@
+# [23.1.0](https://github.com/growingio/gio-design-icons/compare/v23.0.0...v23.1.0) (2022-04-26)
+
+
+### Features
+
+* **icons:** rename icons ([#252](https://github.com/growingio/gio-design-icons/issues/252)) ([6b06e3d](https://github.com/growingio/gio-design-icons/commit/6b06e3d9ec02250afb409cbc9d6517effec167c9))
+
 # [23.0.0](https://github.com/growingio/gio-design-icons/compare/v22.1.0...v23.0.0) (2022-03-18)
 
 
