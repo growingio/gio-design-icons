@@ -1,3 +1,10 @@
+# [23.2.0](https://github.com/growingio/gio-design-icons/compare/v23.1.0...v23.2.0) (2022-04-27)
+
+
+### Features
+
+* **icon:** add upload-outlined ([#253](https://github.com/growingio/gio-design-icons/issues/253)) ([fa1d5a6](https://github.com/growingio/gio-design-icons/commit/fa1d5a6532efbf5b03d8df7390e655ce0d7cf0b0))
+
 # [23.1.0](https://github.com/growingio/gio-design-icons/compare/v23.0.0...v23.1.0) (2022-04-26)
 
 
