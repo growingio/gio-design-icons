@@ -1,3 +1,10 @@
+# [23.3.0](https://github.com/growingio/gio-design-icons/compare/v23.2.0...v23.3.0) (2022-08-24)
+
+
+### Features
+
+* **icon:** add group filled ([#264](https://github.com/growingio/gio-design-icons/issues/264)) ([fd7ce08](https://github.com/growingio/gio-design-icons/commit/fd7ce08ec078c774260cb5074d49964e58850a30))
+
 # [23.2.0](https://github.com/growingio/gio-design-icons/compare/v23.1.0...v23.2.0) (2022-04-27)
 
 
