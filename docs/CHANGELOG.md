@@ -1,3 +1,10 @@
+# [23.4.0](https://github.com/growingio/gio-design-icons/compare/v23.3.0...v23.4.0) (2022-09-01)
+
+
+### Features
+
+* **icons:** 添加一些图标 ([#272](https://github.com/growingio/gio-design-icons/issues/272)) ([3243b67](https://github.com/growingio/gio-design-icons/commit/3243b677057b3df395aa372d3d56aebc3cd91bed))
+
 # [23.3.0](https://github.com/growingio/gio-design-icons/compare/v23.2.0...v23.3.0) (2022-08-24)
 
 
