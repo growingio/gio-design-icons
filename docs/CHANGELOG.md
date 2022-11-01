@@ -1,3 +1,10 @@
+# [23.5.0](https://github.com/growingio/gio-design-icons/compare/v23.4.0...v23.5.0) (2022-11-01)
+
+
+### Features
+
+* add boxplot-chart icon ([130dc12](https://github.com/growingio/gio-design-icons/commit/130dc12d00dbadb346beb0ba60a0bb3cd0c08bd9))
+
 # [23.4.0](https://github.com/growingio/gio-design-icons/compare/v23.3.0...v23.4.0) (2022-09-01)
 
 
