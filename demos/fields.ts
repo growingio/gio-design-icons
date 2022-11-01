@@ -34,6 +34,7 @@ const data: string[] = [
   'table-outlined',
   'mixed-column-chart-outlined',
   'mixed-line-chart-outlined',
+  'boxplot-chart-outlined',
   'calculate-outlined',
   'click-outlined',
   'gauge-outlined',
