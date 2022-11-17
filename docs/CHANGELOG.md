@@ -1,3 +1,10 @@
+# [23.6.0](https://github.com/growingio/gio-design-icons/compare/v23.5.0...v23.6.0) (2022-11-17)
+
+
+### Features
+
+* add minus-square and plus-square ([#286](https://github.com/growingio/gio-design-icons/issues/286)) ([9f15fc2](https://github.com/growingio/gio-design-icons/commit/9f15fc26de0bc24426196a55aa2a15c90674e2fc))
+
 # [23.5.0](https://github.com/growingio/gio-design-icons/compare/v23.4.0...v23.5.0) (2022-11-01)
 
 
