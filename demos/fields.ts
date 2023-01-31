@@ -39,7 +39,11 @@ const data: string[] = [
   'click-outlined',
   'gauge-outlined',
   'code-outlined',
-  'condition-outlined'
+  'condition-outlined',
+  'absolute-outlined',
+  'percentage-outlined',
+  'stacked-area-chart-outlined',
+  'stacked-column-chart-outlined'
 ]
 const platform: string[] = [
   'mobile-outlined',
