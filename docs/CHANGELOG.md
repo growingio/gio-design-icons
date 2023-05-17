@@ -1,3 +1,10 @@
+## [23.7.1](https://github.com/growingio/gio-design-icons/compare/v23.7.0...v23.7.1) (2023-05-17)
+
+
+### Bug Fixes
+
+* 添加新的4个icons ([#311](https://github.com/growingio/gio-design-icons/issues/311)) ([48651af](https://github.com/growingio/gio-design-icons/commit/48651af46118dcfd62786c49242773671bb4a4fd))
+
 # [23.7.0](https://github.com/growingio/gio-design-icons/compare/v23.6.0...v23.7.0) (2023-01-31)
 
 
