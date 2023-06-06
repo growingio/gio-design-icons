@@ -48,6 +48,7 @@ const data: string[] = [
   "security-outlined",
   "suspend-outlined",
   "space-outlined",
+  "reject-outlined",
 ];
 const platform: string[] = [
   "mobile-outlined",
