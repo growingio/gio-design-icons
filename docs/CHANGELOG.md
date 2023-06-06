@@ -1,3 +1,10 @@
+## [23.7.2](https://github.com/growingio/gio-design-icons/compare/v23.7.1...v23.7.2) (2023-06-06)
+
+
+### Bug Fixes
+
+* **RejectOutlined:** 添加ReactOutlined Icon ([#313](https://github.com/growingio/gio-design-icons/issues/313)) ([5ef68f9](https://github.com/growingio/gio-design-icons/commit/5ef68f9a9bb31c5f7310654c700627bd5bdd0220))
+
 ## [23.7.1](https://github.com/growingio/gio-design-icons/compare/v23.7.0...v23.7.1) (2023-05-17)
 
 
