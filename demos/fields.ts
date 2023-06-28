@@ -49,6 +49,7 @@ const data: string[] = [
   "suspend-outlined",
   "space-outlined",
   "reject-outlined",
+  "history-data-outlined",
 ];
 const platform: string[] = [
   "mobile-outlined",
