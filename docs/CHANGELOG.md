@@ -1,3 +1,10 @@
+## [23.7.3](https://github.com/growingio/gio-design-icons/compare/v23.7.2...v23.7.3) (2023-06-28)
+
+
+### Bug Fixes
+
+* **historyDataOutlined:** 新增历史数据icon ([#314](https://github.com/growingio/gio-design-icons/issues/314)) ([96e7ce2](https://github.com/growingio/gio-design-icons/commit/96e7ce217e61da42c356a54288f1f6a3a2f3342b))
+
 ## [23.7.2](https://github.com/growingio/gio-design-icons/compare/v23.7.1...v23.7.2) (2023-06-06)
 
 
