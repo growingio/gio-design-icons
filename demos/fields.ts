@@ -12,6 +12,7 @@ const user: string[] = [
   "id-outlined",
   "user-plus-filled",
   "user-service-filled",
+  "user-add-outlined",
 ];
 const data: string[] = [
   "database-outlined",
@@ -74,7 +75,6 @@ const platform: string[] = [
   "mini-program-outlined",
   "mini-program-filled",
 ];
-
 const toPascalCase = (input: string) =>
   ("-" + input).replace(/-([a-z])/g, (match) => match[1].toUpperCase());
 
