@@ -12,6 +12,7 @@ const user: string[] = [
   "id-outlined",
   "user-plus-filled",
   "user-service-filled",
+  "user-add-outlined",
 ];
 const data: string[] = [
   "database-outlined",
