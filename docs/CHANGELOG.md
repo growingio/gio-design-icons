@@ -1,3 +1,10 @@
+## [23.7.4](https://github.com/growingio/gio-design-icons/compare/v23.7.3...v23.7.4) (2023-08-23)
+
+
+### Bug Fixes
+
+* **drilldownOutlined userAddOutlined:** 新增icon ([#315](https://github.com/growingio/gio-design-icons/issues/315)) ([a40f895](https://github.com/growingio/gio-design-icons/commit/a40f895a22339d4b2c84be27369ff5b21848d9ba))
+
 ## [23.7.3](https://github.com/growingio/gio-design-icons/compare/v23.7.2...v23.7.3) (2023-06-28)
 
 
