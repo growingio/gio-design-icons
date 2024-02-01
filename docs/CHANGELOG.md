@@ -1,3 +1,10 @@
+## [23.7.5](https://github.com/growingio/gio-design-icons/compare/v23.7.4...v23.7.5) (2024-02-01)
+
+
+### Bug Fixes
+
+* **svgs:** 新增column-header-outlined formula-filled permutation-outlined row-header-outlined value-header-outlined ([#343](https://github.com/growingio/gio-design-icons/issues/343)) ([fe587f2](https://github.com/growingio/gio-design-icons/commit/fe587f27e03a81290e73b4dce0d8d9bb02840068))
+
 ## [23.7.4](https://github.com/growingio/gio-design-icons/compare/v23.7.3...v23.7.4) (2023-08-23)
 
 
