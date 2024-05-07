@@ -1,3 +1,10 @@
+# [23.8.0](https://github.com/growingio/gio-design-icons/compare/v23.7.5...v23.8.0) (2024-05-07)
+
+
+### Features
+
+* **icons:** add PageOutlined ([#344](https://github.com/growingio/gio-design-icons/issues/344)) ([81209db](https://github.com/growingio/gio-design-icons/commit/81209db17260958a54f4e75086ea02bc8507ea4d))
+
 ## [23.7.5](https://github.com/growingio/gio-design-icons/compare/v23.7.4...v23.7.5) (2024-02-01)
 
 
