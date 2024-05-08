@@ -1,3 +1,10 @@
+# [23.9.0](https://github.com/growingio/gio-design-icons/compare/v23.8.0...v23.9.0) (2024-05-08)
+
+
+### Features
+
+* **TagRankOutlined:** 添加新图标TagRankOutlined ([#345](https://github.com/growingio/gio-design-icons/issues/345)) ([601457d](https://github.com/growingio/gio-design-icons/commit/601457d3db4a971393e494091760f90449db8ca4))
+
 # [23.8.0](https://github.com/growingio/gio-design-icons/compare/v23.7.5...v23.8.0) (2024-05-07)
 
 
