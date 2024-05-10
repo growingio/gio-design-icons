@@ -1,3 +1,10 @@
+## [23.9.1](https://github.com/growingio/gio-design-icons/compare/v23.9.0...v23.9.1) (2024-05-10)
+
+
+### Bug Fixes
+
+* 修改TagRankIcon ([#346](https://github.com/growingio/gio-design-icons/issues/346)) ([f205d48](https://github.com/growingio/gio-design-icons/commit/f205d48830d38785e01e8b32032bb46cb7db16fd))
+
 # [23.9.0](https://github.com/growingio/gio-design-icons/compare/v23.8.0...v23.9.0) (2024-05-08)
 
 
