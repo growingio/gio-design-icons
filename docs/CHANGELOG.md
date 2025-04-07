@@ -1,3 +1,15 @@
+# [23.10.0](https://github.com/growingio/gio-design-icons/compare/v23.9.1...v23.10.0) (2025-04-07)
+
+
+### Features
+
+* add SheetSortOutlined icon ([#347](https://github.com/growingio/gio-design-icons/issues/347)) ([64f9475](https://github.com/growingio/gio-design-icons/commit/64f9475bbc5d97bd1e66e6302ddf7a6598d21543))
+
+
+### Reverts
+
+* chore(deps-dev): bump semantic-release from 19.0.2 to 22.0.7 ([df06a04](https://github.com/growingio/gio-design-icons/commit/df06a04ff9a2e5be3cdd797465c6189df48901d8))
+
 ## [23.9.1](https://github.com/growingio/gio-design-icons/compare/v23.9.0...v23.9.1) (2024-05-10)
 
 
