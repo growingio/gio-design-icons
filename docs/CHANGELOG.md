@@ -1,3 +1,10 @@
+# [23.11.0](https://github.com/growingio/gio-design-icons/compare/v23.10.0...v23.11.0) (2025-09-04)
+
+
+### Features
+
+* thumbupfilled thumbdownfilled ([4da3d01](https://github.com/growingio/gio-design-icons/commit/4da3d01618cd3105649f44e882f55957a635d8a1))
+
 # [23.10.0](https://github.com/growingio/gio-design-icons/compare/v23.9.1...v23.10.0) (2025-04-07)
 
 
