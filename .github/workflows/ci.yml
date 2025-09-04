@@ -7,7 +7,6 @@ on:
       - master
 jobs:
   install:
-    if: ${{ github.actor != 'dependabot[bot]' }}
     name: Install dependencies
     runs-on: ubuntu-latest
     steps:
@@ -16,10 +15,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
       - name: Cache Node.js modules
         id: cache-node-modules
-        uses: actions/cache@v4.2.4
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
@@ -36,9 +35,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
       - name: Restore Node.js modules
-        uses: actions/cache@v4.2.4
+        uses: actions/cache@v4
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}
